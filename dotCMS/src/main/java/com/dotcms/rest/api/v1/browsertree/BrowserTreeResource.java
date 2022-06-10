@@ -3,8 +3,8 @@ package com.dotcms.rest.api.v1.browsertree;
 import static com.dotcms.util.CollectionsUtils.map;
 
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.api.v1.browser.BrowserQueryForm;

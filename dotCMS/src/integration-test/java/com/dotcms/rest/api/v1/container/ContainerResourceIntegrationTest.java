@@ -8,8 +8,8 @@ import static org.mockito.Mockito.when;
 
 import com.dotcms.rendering.velocity.services.ContainerLoader;
 import com.dotcms.rendering.velocity.util.VelocityUtil;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.RestUtilTest;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.exception.SecurityException;

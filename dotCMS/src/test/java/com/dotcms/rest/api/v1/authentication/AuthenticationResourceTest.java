@@ -12,6 +12,7 @@ import static org.mockito.Mockito.when;
 import com.dotcms.UnitTestBase;
 import com.dotcms.api.web.WebSessionContext;
 import com.dotcms.cms.login.LoginServiceAPI;
+
 import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.RestUtilTest;
 import com.dotcms.util.UserUtilTest;

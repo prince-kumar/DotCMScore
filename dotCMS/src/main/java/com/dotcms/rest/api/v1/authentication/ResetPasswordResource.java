@@ -1,5 +1,6 @@
 package com.dotcms.rest.api.v1.authentication;
 
+import com.dotcms.rest.ResponseEntityView;
 import com.dotmarketing.business.APILocator;
 import java.util.Locale;
 
@@ -15,7 +16,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import org.glassfish.jersey.server.JSONP;
-import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.annotation.InitRequestRequired;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.exception.ForbiddenException;

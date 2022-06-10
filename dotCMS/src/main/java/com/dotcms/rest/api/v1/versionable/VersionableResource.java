@@ -1,7 +1,7 @@
 package com.dotcms.rest.api.v1.versionable;
 
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotmarketing.beans.Identifier;
@@ -35,7 +35,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.Optional;
 
 /**
  * Resource to interact with versions for Contentlet, Templates, Containers, Links, etc

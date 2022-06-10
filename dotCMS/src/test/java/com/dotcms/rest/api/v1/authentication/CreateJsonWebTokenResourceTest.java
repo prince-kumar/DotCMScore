@@ -4,6 +4,7 @@ import com.dotcms.UnitTestBase;
 import com.dotcms.auth.providers.jwt.JsonWebTokenUtils;
 import com.dotcms.cms.login.LoginServiceAPI;
 import javax.ws.rs.core.Response;
+
 import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.RestUtilTest;
 import com.dotcms.util.SecurityLoggerServiceAPI;

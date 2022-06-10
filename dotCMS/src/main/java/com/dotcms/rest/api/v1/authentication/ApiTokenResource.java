@@ -5,8 +5,8 @@ import com.dotcms.auth.providers.jwt.factories.ApiTokenAPI;
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
 import com.dotcms.repackage.org.apache.commons.httpclient.HttpStatus;
 import com.dotcms.repackage.org.apache.commons.net.util.SubnetUtils;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.RestClientBuilder;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
@@ -20,7 +20,7 @@ import com.dotmarketing.util.*;
 import com.liferay.portal.model.User;
 import io.vavr.control.Try;
 import java.net.ConnectException;
-import javax.ws.rs.core.Response.ResponseBuilder;
+
 import org.glassfish.jersey.internal.util.Base64;
 import org.glassfish.jersey.server.JSONP;
 

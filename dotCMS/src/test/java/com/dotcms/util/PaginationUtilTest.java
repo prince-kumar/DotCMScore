@@ -1,8 +1,7 @@
 package com.dotcms.util;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.ws.rs.core.Response;
+
 import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.api.v1.theme.ThemeResource;
 import com.dotcms.util.pagination.OrderDirection;

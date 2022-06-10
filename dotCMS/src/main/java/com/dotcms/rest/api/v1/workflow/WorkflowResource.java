@@ -19,17 +19,10 @@ import com.dotcms.contenttype.transform.field.LegacyFieldTransformer;
 import com.dotcms.mock.response.MockHttpResponse;
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
 import com.dotcms.repackage.javax.validation.constraints.NotNull;
-import com.dotmarketing.util.json.JSONArray;
+import com.dotcms.rest.*;
 import com.dotmarketing.util.json.JSONException;
 import com.dotmarketing.util.json.JSONObject;
-import com.dotcms.rest.AnonymousAccess;
-import com.dotcms.rest.ContentHelper;
-import com.dotcms.rest.EmptyHttpResponse;
-import com.dotcms.rest.InitDataObject;
-import com.dotcms.rest.MapToContentletPopulator;
-import com.dotcms.rest.PATCH;
 import com.dotcms.rest.ResponseEntityView;
-import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.IncludePermissions;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.api.MultiPartUtils;
@@ -41,7 +34,6 @@ import com.dotcms.rest.exception.ForbiddenException;
 import com.dotcms.util.CollectionsUtils;
 import com.dotcms.util.ConversionUtils;
 import com.dotcms.util.DotPreconditions;
-import com.dotcms.util.JsonArrayToLinkedSetConverter;
 import com.dotcms.workflow.form.BulkActionForm;
 import com.dotcms.workflow.form.FireActionByNameForm;
 import com.dotcms.workflow.form.FireActionForm;
@@ -130,7 +122,6 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
@@ -1414,7 +1405,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire action by name multipart",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "404", description = "Action not found")})
@@ -1482,7 +1473,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire action by name",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "400", description = "Action not found")})
@@ -1625,7 +1616,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire default action by name",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "400", description = "Action not found")})
@@ -1725,7 +1716,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire default action by name on multiple contents",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "400", description = "Action not found")})
@@ -2031,7 +2022,7 @@ public class WorkflowResource {
                 (contentlet, systemAction, user);
 
         final Response restResponse = this.mergeContentlet(systemAction, fireActionForm, request, user, contentlet, workflowActionOpt);
-        final  Map<String, Object> contentletMap = (Map<String, Object>)ResponseEntityView.class.cast(restResponse.getEntity()).getEntity();
+        final  Map<String, Object> contentletMap = (Map<String, Object>) ResponseEntityView.class.cast(restResponse.getEntity()).getEntity();
         contentletId = !UtilMethods.isSet(contentletId)? (String)contentletMap.get("identifier"):contentletId;
         resultMap.put(contentletId, contentletMap);
     }
@@ -2171,7 +2162,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire action by ID multipart",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "404", description = "Action not found")})
@@ -2258,7 +2249,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire default action by name multipart",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "400", description = "Action not found")})
@@ -2293,7 +2284,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire default action",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "400", description = "Action not found")})
@@ -2389,7 +2380,7 @@ public class WorkflowResource {
     @Operation(summary = "Fire action by ID",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
+                            responseCode = "200", description="OK",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseEntityView.class))),
                     @ApiResponse(responseCode = "404", description = "Action not found")})

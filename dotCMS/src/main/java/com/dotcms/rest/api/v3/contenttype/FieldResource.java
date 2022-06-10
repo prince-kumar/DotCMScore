@@ -1,7 +1,6 @@
 package com.dotcms.rest.api.v3.contenttype;
 
 import com.dotcms.contenttype.business.ContentTypeFieldLayoutAPI;
-import com.dotcms.contenttype.business.FieldAPI;
 import com.dotcms.contenttype.model.field.Field;
 import com.dotcms.contenttype.model.field.layout.FieldLayout;
 import com.dotcms.contenttype.model.type.ContentType;

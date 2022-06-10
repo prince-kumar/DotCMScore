@@ -11,10 +11,7 @@ import com.dotcms.util.Delegate;
 import com.dotcms.util.marshal.MarshalFactory;
 import com.dotcms.util.marshal.MarshalUtils;
 import com.dotmarketing.business.APILocator;
-import com.dotmarketing.db.DbConnectionFactory;
-import com.dotmarketing.db.HibernateUtil;
 import com.dotmarketing.exception.DotDataException;
-import com.dotmarketing.exception.DotHibernateException;
 import com.dotmarketing.util.Logger;
 import com.liferay.portal.model.User;
 

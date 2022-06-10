@@ -1,6 +1,5 @@
 package com.dotcms.rest.api.v1.browsertree;
 
-import com.dotcms.rest.ResponseEntityView;
 import com.dotmarketing.beans.Host;
 import com.dotmarketing.business.APILocator;
 import com.dotmarketing.business.Treeable;
@@ -15,13 +14,11 @@ import com.dotmarketing.portlets.folders.business.FolderAPI;
 import com.dotmarketing.portlets.folders.model.Folder;
 import com.dotmarketing.util.HostUtil;
 import com.dotmarketing.util.UtilMethods;
-import com.dotmarketing.util.WebKeys;
 import com.liferay.portal.model.User;
 import com.liferay.util.StringPool;
 import io.vavr.control.Try;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

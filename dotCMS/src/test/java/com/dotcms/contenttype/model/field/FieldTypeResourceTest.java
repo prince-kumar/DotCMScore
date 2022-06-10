@@ -4,6 +4,7 @@ package com.dotcms.contenttype.model.field;
 import com.dotcms.UnitTestBase;
 import javax.ws.rs.core.Response;
 import com.dotcms.rest.InitDataObject;
+
 import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.RestUtilTest;
 import com.dotcms.rest.WebResource;
@@ -16,7 +17,6 @@ import org.junit.Test;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import static com.dotcms.util.CollectionsUtils.toImmutableList;
 import static org.junit.Assert.assertEquals;

@@ -16,10 +16,10 @@ import static org.mockito.Mockito.when;
 import com.dotcms.UnitTestBase;
 import com.dotcms.repackage.org.apache.struts.Globals;
 import com.dotcms.rest.InitDataObject;
+
 import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.RestUtilTest;
 import com.dotcms.rest.WebResource;
-import com.dotcms.util.I18NUtil;
 import com.dotcms.util.PaginationUtil;
 import com.dotmarketing.beans.Host;
 import com.dotmarketing.business.DotStateException;

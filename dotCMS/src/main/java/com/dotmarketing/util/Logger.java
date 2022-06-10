@@ -6,19 +6,13 @@
 package com.dotmarketing.util;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.dotcms.api.system.event.Payload;
-import com.dotcms.api.system.event.SystemEventType;
-import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.api.v1.system.logger.ChangeLoggerLevelEvent;
-import com.dotcms.rest.api.v1.system.logger.LoggerView;
-import com.dotmarketing.business.APILocator;
 import com.liferay.util.StringPool;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -34,8 +28,6 @@ import com.github.benmanes.caffeine.cache.RemovalListener;
 import com.google.common.base.Objects;
 import io.vavr.Lazy;
 import io.vavr.control.Try;
-
-import javax.ws.rs.core.Response;
 
 /**
  * @author David Torres

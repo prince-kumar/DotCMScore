@@ -7,7 +7,6 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.nullable;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyBoolean;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -47,8 +46,8 @@ import com.dotcms.mock.request.MockHeaderRequest;
 import com.dotcms.mock.request.MockHttpRequestIntegrationTest;
 import com.dotcms.mock.request.MockSessionRequest;
 import com.dotcms.rest.EmptyHttpResponse;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.util.IntegrationTestInitService;
 import com.dotmarketing.business.APILocator;

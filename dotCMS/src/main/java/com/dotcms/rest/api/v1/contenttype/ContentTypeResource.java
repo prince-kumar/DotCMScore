@@ -20,7 +20,6 @@ import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.InitRequestRequired;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.annotation.PermissionsUtil;
-import com.dotcms.rest.exception.BadRequestException;
 import com.dotcms.rest.exception.ForbiddenException;
 import com.dotcms.rest.exception.mapper.ExceptionMapperUtil;
 import com.dotcms.util.PaginationUtil;

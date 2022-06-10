@@ -320,6 +320,7 @@ public class CMSConfigResource {
                                       @Context final HttpServletResponse response,
                                       @FormDataParam("user") String user, @FormDataParam ("password") String password,
                                       @FormDataParam ("logoFile") File logoFile,
+                                      // Need to hide second
                                       @FormDataParam ("logoFile") FormDataContentDisposition logoDetail ) throws IOException, JSONException {
 
         InitDataObject initData = webResource.init( "user/" + user + "/password/" + password, request, response, true , PortletID.CONFIGURATION.toString());

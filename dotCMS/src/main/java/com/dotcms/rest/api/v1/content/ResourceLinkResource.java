@@ -2,8 +2,8 @@ package com.dotcms.rest.api.v1.content;
 
 import com.dotcms.contenttype.model.field.BinaryField;
 import com.dotcms.contenttype.model.field.Field;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.util.DotPreconditions;

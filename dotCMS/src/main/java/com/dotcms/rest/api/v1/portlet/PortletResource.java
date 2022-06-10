@@ -4,8 +4,8 @@ import static com.dotcms.util.CollectionsUtils.map;
 import static com.liferay.portal.model.Portlet.DATA_VIEW_MODE_KEY;
 
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.api.v1.authentication.ResponseUtil;
@@ -27,7 +27,6 @@ import com.liferay.portal.model.User;
 import io.vavr.control.Try;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

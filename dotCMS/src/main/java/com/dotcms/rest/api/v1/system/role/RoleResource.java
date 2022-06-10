@@ -1,8 +1,8 @@
 package com.dotcms.rest.api.v1.system.role;
 
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.exception.mapper.ExceptionMapperUtil;
 import com.dotmarketing.business.APILocator;

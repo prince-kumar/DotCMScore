@@ -1,8 +1,8 @@
 package com.dotcms.rest.api.v1.template;
 
 import com.dotcms.business.WrapInTransaction;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.api.BulkResultView;

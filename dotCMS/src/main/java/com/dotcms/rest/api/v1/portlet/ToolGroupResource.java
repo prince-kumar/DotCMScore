@@ -2,6 +2,7 @@ package com.dotcms.rest.api.v1.portlet;
 
 import static com.dotcms.util.CollectionsUtils.map;
 
+import com.dotcms.rest.ResponseEntityView;
 import com.dotmarketing.exception.DotDataException;
 import com.dotmarketing.exception.DotSecurityException;
 import java.io.Serializable;
@@ -18,7 +19,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.glassfish.jersey.server.JSONP;
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
-import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotmarketing.business.APILocator;

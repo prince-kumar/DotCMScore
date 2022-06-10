@@ -1,6 +1,7 @@
 package com.dotcms.rest.api.v1.index;
 
 import com.dotcms.content.elasticsearch.util.ESMappingUtilHelper;
+import com.dotcms.rest.ResponseEntityView;
 import com.liferay.portal.language.LanguageUtil;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,7 +42,6 @@ import com.dotcms.contenttype.model.type.ContentType;
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
 import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResourceResponse;
-import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.api.v1.authentication.ResponseUtil;

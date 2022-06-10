@@ -7,8 +7,8 @@ import com.dotcms.contenttype.model.field.FieldVariable;
 import com.dotcms.contenttype.model.field.ImmutableFieldVariable;
 import com.dotcms.contenttype.transform.field.JsonFieldVariableTransformer;
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
-import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.ResponseEntityView;
+import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.exception.ForbiddenException;
@@ -255,7 +255,7 @@ public class FieldVariableResource implements Serializable {
 
 			} else {
 
-				response = Response.ok(new ResponseEntityView(new JsonFieldVariableTransformer(fieldVariable).mapObject())).build();				
+				response = Response.ok(new ResponseEntityView(new JsonFieldVariableTransformer(fieldVariable).mapObject())).build();
 			}
 
 		} catch (NotFoundInDbException e) {
@@ -295,7 +295,7 @@ public class FieldVariableResource implements Serializable {
 
 			} else {
 
-				response = Response.ok(new ResponseEntityView(new JsonFieldVariableTransformer(fieldVariable).mapObject())).build();				
+				response = Response.ok(new ResponseEntityView(new JsonFieldVariableTransformer(fieldVariable).mapObject())).build();
 			}
 
 		} catch (NotFoundInDbException e) {

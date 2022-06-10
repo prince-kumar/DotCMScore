@@ -1,12 +1,12 @@
 package com.dotcms.rest.exception.mapper;
 
 import com.dotcms.api.web.HttpServletRequestThreadLocal;
-import com.dotmarketing.util.UtilMethods;
+import com.dotcms.rest.ResponseEntityView;
+
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import com.dotcms.rest.ErrorEntity;
-import com.dotcms.rest.ResponseEntityView;
 import com.dotmarketing.business.APILocator;
 import com.dotmarketing.business.web.WebAPILocator;
 import com.dotmarketing.exception.DotSecurityException;

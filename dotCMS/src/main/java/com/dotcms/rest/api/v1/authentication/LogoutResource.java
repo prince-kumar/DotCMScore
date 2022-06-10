@@ -9,8 +9,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import org.glassfish.jersey.server.JSONP;
+
 import com.dotcms.rest.ResponseEntityView;
+import org.glassfish.jersey.server.JSONP;
 import com.dotcms.rest.WebResource;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotmarketing.business.APILocator;

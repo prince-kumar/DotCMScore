@@ -167,7 +167,7 @@ public class FieldResource implements Serializable {
     @JSONP
     @NoCache
     @Produces({ MediaType.APPLICATION_JSON, "application/javascript" })
-    public Response getContentTypeFieldById(
+    public Response getContentTypeFieldById(@PathParam("typeIdOrVarName") final String typeIdOrVarName,
             @PathParam("fieldId") final String fieldId, @Context final HttpServletRequest httpServletRequest, @Context final HttpServletResponse httpServletResponse)
             throws DotDataException, DotSecurityException {
 
@@ -223,7 +223,7 @@ public class FieldResource implements Serializable {
     @NoCache
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({ MediaType.APPLICATION_JSON, "application/javascript" })
-    public Response updateContentTypeFieldById(@PathParam("fieldId") final String fieldId,
+    public Response updateContentTypeFieldById(@PathParam("typeIdOrVarName") final String typeIdOrVarName,@PathParam("fieldId") final String fieldId,
             final String fieldJson, @Context final HttpServletRequest httpServletRequest, @Context final HttpServletResponse httpServletResponse) throws DotDataException, DotSecurityException {
 
         final InitDataObject initData = this.webResource.init(null, httpServletRequest, httpServletResponse, false, null);
@@ -354,6 +354,7 @@ public class FieldResource implements Serializable {
     @NoCache
     @Produces({ MediaType.APPLICATION_JSON, "application/javascript" })
     public Response deleteContentTypeFieldById(
+            @PathParam("typeIdOrVarName") final String typeIdOrVarName,
             @PathParam("fieldId") final String fieldId,
             @Context final HttpServletRequest httpServletRequest,
             @Context final HttpServletResponse httpServletResponse)

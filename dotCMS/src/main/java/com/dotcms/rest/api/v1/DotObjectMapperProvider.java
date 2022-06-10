@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.dotcms.repackage.com.google.common.annotations.VisibleForTesting;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.guava.GuavaModule;
+import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 /**
  * Encapsulates the configuration for the Object Mapper on the Resources.
@@ -35,14 +38,20 @@ public class DotObjectMapperProvider {
 
     public static ObjectMapper createDefaultMapper() {
 
-        final ObjectMapper result = new ObjectMapper();
-        result.disable(DeserializationFeature.WRAP_EXCEPTIONS);
+        final ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(DeserializationFeature.WRAP_EXCEPTIONS);
+
+
+        mapper.registerModule(new Jdk8Module());
+        mapper.registerModule(new JavaTimeModule());
+        mapper.registerModule(new GuavaModule());
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
         if (Config.getBooleanProperty("dotcms.rest.sort.json.properties", true)) {
-            result.configure(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY, true);
-            result.configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true);
+            mapper.configure(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY, true);
+            mapper.configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true);
         }
-        return result;
+        return mapper;
     }
 
     private static class SingletonHolder {

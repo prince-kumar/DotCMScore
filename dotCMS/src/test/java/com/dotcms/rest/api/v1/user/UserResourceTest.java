@@ -4,11 +4,8 @@ import com.dotcms.UnitTestBase;
 import com.dotcms.api.system.user.UserService;
 import com.dotcms.cms.login.LoginServiceAPI;
 import com.dotcms.repackage.org.apache.struts.Globals;
-import com.dotcms.rest.ErrorResponseHelper;
-import com.dotcms.rest.InitDataObject;
-import com.dotcms.rest.ResponseEntityView;
-import com.dotcms.rest.RestUtilTest;
-import com.dotcms.rest.WebResource;
+import com.dotcms.rest.*;
+
 import com.dotcms.rest.WebResource.InitBuilder;
 import com.dotcms.rest.exception.ForbiddenException;
 import com.dotcms.util.PaginationUtil;

@@ -2,6 +2,7 @@ package com.dotcms.rest.api.v1.system;
 
 import static com.dotcms.rest.ResponseEntityView.OK;
 
+import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.InitDataObject;
 import com.dotcms.rest.WebResource.InitBuilder;
 import com.dotcms.rest.api.v1.maintenance.JVMInfoResource;
@@ -13,14 +14,12 @@ import io.vavr.Tuple2;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
-import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
@@ -32,9 +31,7 @@ import javax.ws.rs.core.Response;
 import com.dotcms.rest.WebResource;
 import com.dotmarketing.business.Role;
 import com.dotmarketing.util.Config;
-import io.vavr.control.Try;
 import org.glassfish.jersey.server.JSONP;
-import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.exception.mapper.ExceptionMapperUtil;
 import com.liferay.util.LocaleUtil;

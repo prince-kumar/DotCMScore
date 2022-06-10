@@ -2,9 +2,7 @@ package com.dotcms.rest.api.v1.apps;
 
 import static com.dotcms.rest.ResponseEntityView.OK;
 
-import com.dotcms.rest.InitDataObject;
-import com.dotcms.rest.ResponseEntityView;
-import com.dotcms.rest.WebResource;
+import com.dotcms.rest.*;
 import com.dotcms.rest.annotation.NoCache;
 import com.dotcms.rest.api.v1.apps.view.AppView;
 import com.dotcms.rest.api.v1.authentication.ResponseUtil;
@@ -17,22 +15,17 @@ import com.google.common.annotations.VisibleForTesting;
 import com.liferay.portal.model.User;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.BeanParam;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.glassfish.jersey.media.multipart.FormDataMultiPart;
 
 
@@ -70,9 +63,9 @@ public class AppsResource {
     @JSONP
     @NoCache
     @Produces({MediaType.APPLICATION_JSON, "application/javascript"})
-    public final Response listAvailableApps(@Context final HttpServletRequest request,
-                                            @Context final HttpServletResponse response,
-                                            @QueryParam("filter") final String filter
+    public final GenericResponseEntityView<List<AppView>> listAvailableApps(@Context final HttpServletRequest request,
+                                                                   @Context final HttpServletResponse response,
+                                                                   @QueryParam("filter") final String filter
     ) {
         try {
             final InitDataObject initData =
@@ -84,11 +77,14 @@ public class AppsResource {
                             .init();
             final User user = initData.getUser();
             final List<AppView> appViews = helper.getAvailableDescriptorViews(user, filter);
-            return Response.ok(new ResponseEntityView(appViews)).build(); // 200
+
+
+            return GenericResponseEntityView.<List<AppView>>builder().entity(appViews).build(); // 200
         } catch (Exception e) {
             //By doing this mapping here. The resource becomes integration test friendly.
             Logger.error(this.getClass(), "Exception on listing all available apps.", e);
-            return ResponseUtil.mapExceptionResponse(e);
+            throw new InternalServerErrorException(e);
+            //return ResponseUtil.mapExceptionResponse(e);
         }
     }
 
@@ -129,7 +125,8 @@ public class AppsResource {
             Logger.error(this.getClass(),
                     String.format("Exception getting app for key: `%s`.",key) , e
             );
-            return ResponseUtil.mapExceptionResponse(e);
+            throw new InternalServerErrorException(e);
+           // return ResponseUtil.mapExceptionResponse(e);
         }
     }
 

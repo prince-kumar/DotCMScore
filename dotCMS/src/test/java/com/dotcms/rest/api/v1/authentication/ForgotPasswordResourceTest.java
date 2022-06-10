@@ -15,6 +15,7 @@ import com.dotcms.company.CompanyAPI;
 import com.dotcms.repackage.org.apache.struts.Globals;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+
 import com.dotcms.rest.ResponseEntityView;
 import com.dotcms.rest.RestUtilTest;
 import com.dotmarketing.business.ApiProvider;

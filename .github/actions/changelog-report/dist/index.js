@@ -130,7 +130,7 @@ const enrichIssues = () => {
     });
 };
 const formatEntry = (entry) => {
-    return `- *${entry.sha}*: ${entry.subject.trim()}`;
+    return `- ${entry.sha}: ${entry.subject.trim()}`;
 };
 const calculateWidths = () => {
     var _a;

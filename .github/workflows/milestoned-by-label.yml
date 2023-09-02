@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Add milestone by label
     steps:
-      - 
+      -
+        run: echo "$GITHUB_CONTEXT"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+      -
         run: |
           echo 'hola'

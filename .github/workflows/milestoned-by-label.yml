@@ -1,7 +1,7 @@
 name: Add milestone based on label
 on:
   issues:
-    types: [labeled]
+    types: [labeled, unlabeled]
 jobs:
   add-milestone-by:
     runs-on: ubuntu-latest
